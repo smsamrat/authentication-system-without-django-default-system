@@ -1,0 +1,9 @@
+{% if request.session.email %}
+    <h1>our home page</h1>
+    {{request.session.email}} <a href="{% url 'logout' %}">LogOut</a>
+{% else %}
+    <a href="{% url 'singup' %}">singup</a>
+    <a href="{% url 'login' %}">Login</a>
+{% endif %}
+
+
